@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.9)
+project(shapefile_app VERSION 0.0.1 DESCRIPTION "app using shapefile++ library")
+set (CMAKE_CXX_STANDARD 17)
+find_library(SHAPEFILEC++ shapefile++)
+aux_source_directory(. SRC_LIST)
+add_executable(${PROJECT_NAME} ${SRC_LIST})
+TARGET_LINK_LIBRARIES(${PROJECT_NAME}  ${MYLIB})
